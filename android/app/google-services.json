@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "546481913027",
+    "project_id": "safe-talk-37a74",
+    "storage_bucket": "safe-talk-37a74.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546481913027:android:b86a0ba2a51b9c5314f676",
+        "android_client_info": {
+          "package_name": "com.example.safetalk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUWB50Fg_Azx057ZxgAcwpyTkeLehOtU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
