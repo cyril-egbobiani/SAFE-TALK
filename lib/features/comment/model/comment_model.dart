@@ -1,28 +1,28 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 
-class CommentModel {
-String authorId;
-  String text;
-  DateTime createdAt;
+// class CommentModel {
+// String authorId;
+//   String text;
+//   DateTime createdAt;
 
-  CommentModel({
-    required this.authorId,
-    required this.text,
-    required this.createdAt,
-  });
+//   CommentModel({
+//     required this.authorId,
+//     required this.text,
+//     required this.createdAt,
+//   });
 
-  factory CommentModel.fromFirestore(Map<String, dynamic> data) {
-    return CommentModel(
-      authorId: data['authorId'] ?? '',
-      text: data['text'] ?? '',
-      createdAt: (data['createdAt'] as Timestamp).toDate(),
-    );
-  }
+//   factory CommentModel.fromFirestore(Map<String, dynamic> data) {
+//     return CommentModel(
+//       authorId: data['authorId'] ?? '',
+//       text: data['text'] ?? '',
+//       createdAt: (data['createdAt'] as Timestamp).toDate(),
+//     );
+//   }
 
-  Map<String, dynamic> toFirestore() {
-    return {
-      'authorId': authorId,
-      'text': text,
-      'createdAt': createdAt,
-    };
-  }}
+//   Map<String, dynamic> toFirestore() {
+//     return {
+//       'authorId': authorId,
+//       'text': text,
+//       'createdAt': createdAt,
+//     };
+//   }}

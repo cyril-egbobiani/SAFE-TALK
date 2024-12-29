@@ -74,51 +74,22 @@ class LoginController extends GetxController {
     return true;
   }
 
-  //====================================================== SIGN UP
+  //====================================================== LOGIN
 
   Future<void> login() async {
     if (_validateForm()) {
       isLoading.value = true;
-
-      // final prefs = await SharedPreferences.getInstance();
-
-      // var res = await _authService.register(
-      //     usernameController.text, passwordController.text);
-      // if (res.statusCode == 200) {
-      //   isLoading.value = false;
-
-      //   await prefs.setString('username', usernameController.text.trim());
-      //   await prefs.setString('password', passwordController.text.trim());
-      //   push(page: "/BottomNavBar");
-      //   debugPrint('Sign-Up Successful');
-      // } else {
-      //   isLoading.value = false;
-
-      //   debugPrint('Sign-Up failed');
-      // }
 
       try {
         var addUserData = LoginModel(
             username: usernameController.text,
             password: passwordController.text);
         var result = await loginRepository.addUser(addUserData: addUserData);
-        // if (result.token != '') {
-        //   isLoading.value = false;
-        //   // await _storage.saveString('token', result.token!);
-        //   await _storage.saveString('username', usernameController.text);
-        //   await _storage.saveString('password', passwordController.text);
-        //   Get.snackbar("Success", "User successfully logged in!",
-        //       backgroundColor: Colors.green, colorText: Colors.white);
-        //   push(
-        //     page: '/BottomNavBar',
-        //   );
-        // }
         if (result.token != '') {
           isLoading.value = false;
           _storageService.saveString('token', result.token!);
           _storageService.saveBoolean('isLoggedIn', true);
-          // _storageService.saveBoolean('token', );
-          await _storage.saveString('username', usernameController.text);
+           await _storage.saveString('username', usernameController.text);
           await _storage.saveString('password', passwordController.text);
           pushReplacement(page: "/BottomNavBar");
         }

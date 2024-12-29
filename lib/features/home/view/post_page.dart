@@ -8,10 +8,8 @@ import 'package:safetalk/features/home/controller/home_controller.dart';
 import 'package:safetalk/features/login/controller/login_controller.dart';
 import 'package:safetalk/helpers/constants/color.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
-  static const String path = '/Welcome';
+class PostPage extends StatelessWidget {
+  PostPage({super.key});
 
   final HomeController homeController = Get.put(HomeController());
   final LoginController loginController = Get.put(LoginController());
@@ -21,7 +19,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: fabColor,
         focusColor: Colors.white,
@@ -36,8 +33,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildGreetingSection(),
-          _buildTabSelector(),
+          // _buildGreetingSection(),
           // _buildPostSectionTitle(),
           _buildPostList(),
         ],
@@ -63,28 +59,6 @@ class HomePage extends StatelessWidget {
             height: 30.h,
             colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
           ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildGreetingSection() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 30.h),
-          Text(
-            'HI, ${loginController.usernameController.text}👋',
-            textAlign: TextAlign.left,
-            style: TextStyle(
-                fontSize: 14.sp,
-                fontFamily: 'Poppins-Bold',
-                color: primaryColor),
-          ),
-          SizedBox(height: 20.h),
         ],
       ),
     );

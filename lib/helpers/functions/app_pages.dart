@@ -8,9 +8,9 @@
 
 import 'package:get/get.dart';
 import 'package:safetalk/features/categories/view/categories_page.dart';
-import 'package:safetalk/features/home/screen/home_page.dart';
+import 'package:safetalk/features/home/view/home_page.dart';
 import 'package:safetalk/features/login/view/login_page.dart';
- import 'package:safetalk/features/sign_up/view/signup_page.dart';
+import 'package:safetalk/features/sign_up/view/signup_page.dart';
 import 'package:safetalk/features/wrapper/wrapper_screen.dart';
 import 'package:safetalk/helpers/widgets/bottomnavbar.dart';
 

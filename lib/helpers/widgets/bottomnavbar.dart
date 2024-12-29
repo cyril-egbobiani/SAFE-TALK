@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:safetalk/features/home/screen/home_page.dart';
+import 'package:safetalk/features/home/view/home_page.dart';
 import 'package:safetalk/features/message/view/message_page.dart';
 import 'package:safetalk/helpers/constants/color.dart';
 import 'package:safetalk/helpers/widgets/bottonNavBar_controller.dart';
@@ -22,7 +22,6 @@ class Bottomnavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Obx(() => screens[bottomNavController.selectedIndex.value]),
       bottomNavigationBar: Obx(
         () => Container(
@@ -92,7 +91,7 @@ class Bottomnavbar extends StatelessWidget {
       () => SvgPicture.asset(
         assetPath,
         height: 20.h,
-        width: 20.w,  
+        width: 20.w,
         colorFilter: ColorFilter.mode(
           bottomNavController.selectedIndex.value == index
               ? primaryColor

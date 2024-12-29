@@ -51,15 +51,12 @@ dependencies:
   image_picker: ^1.1.2
   slide_to_act: ^2.0.2
   get:
-  firebase_core: ^3.7.0
-  cloud_firestore: ^5.4.5
-  firebase_storage: ^12.3.5
   flutter_chat_ui: ^1.6.15
-  firebase_auth: ^5.3.2
   encrypt: ^5.0.3
   uuid: ^4.5.1
-  firebase_app_check: ^0.3.1+6
-  
+  flutter_styled_toast: ^2.2.1
+  flutter_local_notifications: ^18.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
